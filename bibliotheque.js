@@ -5595,6 +5595,33 @@ function mount(stage,code){
     scripts[i].parentNode.replaceChild(s,scripts[i]);
   }
   stage.appendChild(frag);
+  isoler(stage);
+}
+/* Les aperçus gardent leurs propres réglages, même si le même bloc
+   est aussi collé ailleurs sur la page (et inversement). */
+function prefixer(sel){
+  return sel.split(",").map(function(p){
+    p=p.trim();
+    if(!p) return p;
+    if(/^(:root|html|body)$/i.test(p)) return "#koweb-bibliotheque .stage";
+    return "#koweb-bibliotheque .stage "+p.replace(/^(:root|html|body)\s+/i,"");
+  }).join(", ");
+}
+function isolerRegles(regles){
+  for(var i=0;i<regles.length;i++){
+    var r=regles[i];
+    if(r.selectorText!==undefined && r.style){
+      try{ r.selectorText=prefixer(r.selectorText); }catch(e){}
+    } else if(r.cssRules && !(r.type===7)){
+      isolerRegles(r.cssRules);
+    }
+  }
+}
+function isoler(stage){
+  var styles=stage.querySelectorAll("style");
+  for(var i=0;i<styles.length;i++){
+    try{ if(styles[i].sheet) isolerRegles(styles[i].sheet.cssRules); }catch(e){}
+  }
 }
 
 var CARDS=[];
