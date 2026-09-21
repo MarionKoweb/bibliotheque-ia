@@ -8,7 +8,7 @@
     RACINE.setAttribute("data-kwb-pret","1");
     var LIEN_ASSISTANT=RACINE.getAttribute("data-assistant")||"";
     var st=document.createElement("style");
-    st.textContent="\n#koweb-bibliotheque{\n  --kw-fond:#F4F4FB;--kw-surface:#FFFFFF;--kw-surface-2:#F7F7FC;--kw-encre:#1B1E2B;\n  --kw-gris:#5E6272;--kw-ligne:#DCDCEA;--kw-ligne-2:#E9E9F3;--kw-accent:#6566D6;\n  --kw-accent-txt:#FFFFFF;--kw-sombre:#11141B;\n  --kw-ombre:0 1px 2px rgba(27,30,43,.05),0 12px 28px -18px rgba(27,30,43,.35);\n  display:block;font-family:inherit;color:var(--kw-encre);line-height:1.6;\n  text-align:left;padding:8px 0 24px\n}\n#koweb-bibliotheque, #koweb-bibliotheque *{box-sizing:border-box}\n#koweb-bibliotheque h2, #koweb-bibliotheque h3, #koweb-bibliotheque p{margin:0;padding:0;text-transform:none;letter-spacing:normal}\n#koweb-bibliotheque button{font-family:inherit;text-transform:none;letter-spacing:normal;\n  box-shadow:none;min-height:0;line-height:1}\n#koweb-bibliotheque .kwb-panel{background:var(--kw-surface);border:1px solid var(--kw-ligne);\n  border-radius:14px;padding:18px 20px;box-shadow:var(--kw-ombre);\n  display:flex;flex-wrap:wrap;gap:20px;align-items:center}\n#koweb-bibliotheque .kwb-panel h2{font-size:17px;font-weight:700;color:var(--kw-encre);\n  flex:1 1 220px;line-height:1.35}\n#koweb-bibliotheque .kwb-panel h2 small{display:block;font-weight:400;font-size:14px;color:var(--kw-gris)}\n#koweb-bibliotheque .kwb-swatch{display:flex;align-items:center;gap:10px}\n#koweb-bibliotheque .kwb-swatch label{font-size:14px;color:var(--kw-gris);font-weight:600;margin:0}\n#koweb-bibliotheque .kwb-swatch input[type=color]{width:44px;height:36px;padding:0;margin:0;\n  border:1px solid var(--kw-ligne);border-radius:9px;background:var(--kw-surface);cursor:pointer}\n#koweb-bibliotheque .kwb-reset{border:1px solid var(--kw-ligne);background:var(--kw-surface-2);\n  color:var(--kw-gris);font-size:14px;font-weight:600;padding:10px 14px;\n  border-radius:9px;cursor:pointer}\n#koweb-bibliotheque .kwb-reset:hover{color:var(--kw-encre);border-color:var(--kw-gris)}\n#koweb-bibliotheque .section-head{margin:48px 0 20px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}\n#koweb-bibliotheque .section-head h2{font-size:26px;font-weight:800;color:var(--kw-encre);line-height:1.2}\n#koweb-bibliotheque .section-head span{font-size:14px;color:var(--kw-gris)}\n#koweb-bibliotheque .rule{height:1px;background:var(--kw-ligne);flex:1 1 60px;min-width:40px}\n#koweb-bibliotheque .grid{display:grid;gap:18px}\n#koweb-bibliotheque .grid.two{grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr))}\n#koweb-bibliotheque .card{min-width:0;background:var(--kw-surface);border:1px solid var(--kw-ligne);\n  border-radius:14px;overflow:hidden;box-shadow:var(--kw-ombre);\n  display:flex;flex-direction:column}\n#koweb-bibliotheque .card-head{padding:16px 18px 12px;display:flex;gap:12px;align-items:flex-start}\n#koweb-bibliotheque .card-head h3{font-size:18px;font-weight:700;color:var(--kw-encre);\n  margin:0 0 4px;line-height:1.25}\n#koweb-bibliotheque .card-head p{font-size:14.5px;color:var(--kw-gris);line-height:1.5}\n#koweb-bibliotheque .tag{flex:none;font:600 11px/1 ui-monospace,\"SFMono-#koweb-bibliothequeegular\",Menlo,Consolas,monospace;\n  letter-spacing:.04em;color:var(--kw-gris);background:var(--kw-surface-2);\n  border:1px solid var(--kw-ligne-2);padding:5px 8px;border-radius:6px;margin-top:2px}\n#koweb-bibliotheque .stage{border-top:1px solid var(--kw-ligne-2);border-bottom:1px solid var(--kw-ligne-2);\n  background:var(--kw-surface-2);transform:translateZ(0);position:relative;\n  overflow:hidden;min-height:130px;display:flex;flex-direction:column;justify-content:center}\n#koweb-bibliotheque .stage > *{min-width:0;max-width:100%}\n#koweb-bibliotheque .stage.dark{background:var(--kw-sombre)}\n#koweb-bibliotheque .stage.tall{min-height:210px}\n#koweb-bibliotheque .card-foot{padding:12px 14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}\n#koweb-bibliotheque .btn{font-size:14px;font-weight:700;border-radius:9px;padding:10px 14px;cursor:pointer;\n  border:1px solid transparent;transition:background .15s,border-color .15s,color .15s}\n#koweb-bibliotheque .btn-primary{background:var(--kw-accent);color:var(--kw-accent-txt)}\n#koweb-bibliotheque .btn-primary:hover{filter:brightness(1.08)}\n#koweb-bibliotheque .btn-ghost{background:transparent;color:var(--kw-gris);border-color:var(--kw-ligne)}\n#koweb-bibliotheque .btn-ghost:hover{color:var(--kw-encre);border-color:var(--kw-gris)}\n#koweb-bibliotheque .btn-ai{background:transparent;color:var(--kw-accent);border-color:var(--kw-accent)}\n#koweb-bibliotheque .btn-ai:hover{background:var(--kw-accent);color:var(--kw-accent-txt)}\n#koweb-bibliotheque [hidden]{display:none!important}\n#koweb-bibliotheque pre.code{margin:0;border:0;border-top:1px solid var(--kw-ligne-2);border-radius:0;\n  background:var(--kw-surface-2);padding:16px;overflow-x:auto;\n  font-family:ui-monospace,\"SFMono-#koweb-bibliothequeegular\",Menlo,Consolas,monospace;\n  font-size:12.5px;line-height:1.65;color:var(--kw-encre);white-space:pre;\n  tab-size:2;max-height:420px}\n#koweb-bibliotheque pre.code .ici{display:inline-block;width:100%;color:#B3261E;font-weight:600;\n  background:rgba(179,38,30,.08)}\n#koweb-bibliotheque .kwb-note{margin-top:48px;padding-top:20px;border-top:1px solid var(--kw-ligne);\n  color:var(--kw-gris);font-size:14.5px}\n#koweb-bibliotheque .kwb-note p{margin:0 0 8px;max-width:72ch}\n#koweb-bibliotheque .kwb-note code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em}\n@media (max-width:520px){ #koweb-bibliotheque .kwb-panel{gap:14px} }\n";
+    st.textContent="\n#koweb-bibliotheque{\n  --kw-fond:#F4F4FB;--kw-surface:#FFFFFF;--kw-surface-2:#F7F7FC;--kw-encre:#1B1E2B;\n  --kw-gris:#5E6272;--kw-ligne:#DCDCEA;--kw-ligne-2:#E9E9F3;--kw-accent:#6566D6;\n  --kw-accent-txt:#FFFFFF;--kw-sombre:#11141B;\n  --kw-ombre:0 1px 2px rgba(27,30,43,.05),0 12px 28px -18px rgba(27,30,43,.35);\n  display:block;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:var(--kw-encre);line-height:1.6;\n  text-align:left;padding:8px 0 24px\n}\n#koweb-bibliotheque, #koweb-bibliotheque *{box-sizing:border-box}\n#koweb-bibliotheque .section-head h2, #koweb-bibliotheque .card-head h3, #koweb-bibliotheque .card-head p, #koweb-bibliotheque .kwb-panel h2, #koweb-bibliotheque .kwb-note p{margin:0;padding:0;text-transform:none;letter-spacing:normal}\n#koweb-bibliotheque .btn, #koweb-bibliotheque .kwb-reset{font-family:inherit;text-transform:none;letter-spacing:normal;\n  box-shadow:none;min-height:0;line-height:1}\n#koweb-bibliotheque .kwb-panel{background:var(--kw-surface);border:1px solid var(--kw-ligne);\n  border-radius:14px;padding:18px 20px;box-shadow:var(--kw-ombre);\n  display:flex;flex-wrap:wrap;gap:20px;align-items:center}\n#koweb-bibliotheque .kwb-panel h2{font-size:17px;font-weight:700;color:var(--kw-encre);\n  flex:1 1 220px;line-height:1.35}\n#koweb-bibliotheque .kwb-panel h2 small{display:block;font-weight:400;font-size:14px;color:var(--kw-gris)}\n#koweb-bibliotheque .kwb-swatch{display:flex;align-items:center;gap:10px}\n#koweb-bibliotheque .kwb-swatch label{font-size:14px;color:var(--kw-gris);font-weight:600;margin:0}\n#koweb-bibliotheque .kwb-swatch input[type=color]{width:44px;height:36px;padding:0;margin:0;\n  border:1px solid var(--kw-ligne);border-radius:9px;background:var(--kw-surface);cursor:pointer}\n#koweb-bibliotheque .kwb-reset{border:1px solid var(--kw-ligne);background:var(--kw-surface-2);\n  color:var(--kw-gris);font-size:14px;font-weight:600;padding:10px 14px;\n  border-radius:9px;cursor:pointer}\n#koweb-bibliotheque .kwb-reset:hover{color:var(--kw-encre);border-color:var(--kw-gris)}\n#koweb-bibliotheque .section-head{margin:48px 0 20px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}\n#koweb-bibliotheque .section-head h2{font-size:26px;font-weight:800;color:var(--kw-encre);line-height:1.2}\n#koweb-bibliotheque .section-head span{font-size:14px;color:var(--kw-gris)}\n#koweb-bibliotheque .rule{height:1px;background:var(--kw-ligne);flex:1 1 60px;min-width:40px}\n#koweb-bibliotheque .grid{display:grid;gap:18px}\n#koweb-bibliotheque .grid.two{grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr))}\n#koweb-bibliotheque .card{min-width:0;background:var(--kw-surface);border:1px solid var(--kw-ligne);\n  border-radius:14px;overflow:hidden;box-shadow:var(--kw-ombre);\n  display:flex;flex-direction:column}\n#koweb-bibliotheque .card-head{padding:16px 18px 12px;display:flex;gap:12px;align-items:flex-start}\n#koweb-bibliotheque .card-head h3{font-size:18px;font-weight:700;color:var(--kw-encre);\n  margin:0 0 4px;line-height:1.25}\n#koweb-bibliotheque .card-head p{font-size:14.5px;color:var(--kw-gris);line-height:1.5}\n#koweb-bibliotheque .tag{flex:none;font:600 11px/1 ui-monospace,\"SFMono-Regular\",Menlo,Consolas,monospace;\n  letter-spacing:.04em;color:var(--kw-gris);background:var(--kw-surface-2);\n  border:1px solid var(--kw-ligne-2);padding:5px 8px;border-radius:6px;margin-top:2px}\n#koweb-bibliotheque .stage{border-top:1px solid var(--kw-ligne-2);border-bottom:1px solid var(--kw-ligne-2);\n  background:var(--kw-surface-2);transform:translateZ(0);position:relative;\n  overflow:hidden;min-height:130px;display:flex;flex-direction:column;justify-content:center}\n#koweb-bibliotheque .stage > *{min-width:0;max-width:100%}\n#koweb-bibliotheque .stage.dark{background:var(--kw-sombre)}\n#koweb-bibliotheque .stage.tall{min-height:210px}\n#koweb-bibliotheque .card-foot{padding:10px 12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}\n#koweb-bibliotheque .btn{font-size:13px;font-weight:700;border-radius:8px;padding:7px 10px;white-space:nowrap;line-height:1.2;cursor:pointer;\n  border:1px solid transparent;transition:background .15s,border-color .15s,color .15s}\n#koweb-bibliotheque .btn-primary{background:var(--kw-accent);color:var(--kw-accent-txt)}\n#koweb-bibliotheque .btn-primary:hover{filter:brightness(1.08)}\n#koweb-bibliotheque .btn-ghost{background:transparent;color:var(--kw-gris);border-color:var(--kw-ligne)}\n#koweb-bibliotheque .btn-ghost:hover{color:var(--kw-encre);border-color:var(--kw-gris)}\n#koweb-bibliotheque .btn-ai{background:transparent;color:var(--kw-accent);border-color:var(--kw-accent)}\n#koweb-bibliotheque .btn-ai:hover{background:var(--kw-accent);color:var(--kw-accent-txt)}\n#koweb-bibliotheque [hidden]{display:none!important}\n#koweb-bibliotheque pre.code{margin:0;border:0;border-top:1px solid var(--kw-ligne-2);border-radius:0;\n  background:var(--kw-surface-2);padding:16px;overflow-x:auto;\n  font-family:ui-monospace,\"SFMono-Regular\",Menlo,Consolas,monospace;\n  font-size:12.5px;line-height:1.65;color:var(--kw-encre);white-space:pre;\n  tab-size:2;max-height:420px}\n#koweb-bibliotheque pre.code .ici{display:inline-block;width:100%;color:#B3261E;font-weight:600;\n  background:rgba(179,38,30,.08)}\n#koweb-bibliotheque .kwb-note{margin-top:48px;padding-top:20px;border-top:1px solid var(--kw-ligne);\n  color:var(--kw-gris);font-size:14.5px}\n#koweb-bibliotheque .kwb-note p{margin:0 0 8px;max-width:72ch}\n#koweb-bibliotheque .kwb-note code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em}\n@media (max-width:520px){ #koweb-bibliotheque .kwb-panel{gap:14px} }\n";
     document.head.appendChild(st);
     RACINE.innerHTML="<div class=\"kwb-panel\"><h2>Teste tes couleurs<small>Les aperçus et le code copié se mettent à jour en direct.</small></h2><div class=\"kwb-swatch\"><label for=\"kwb-c1\">Principale</label><input type=\"color\" id=\"kwb-c1\" value=\"#7D7EE1\"></div><div class=\"kwb-swatch\"><label for=\"kwb-c2\">Lumineuse</label><input type=\"color\" id=\"kwb-c2\" value=\"#C6BCFF\"></div><button class=\"kwb-reset\" id=\"kwb-reset\" type=\"button\">Rétablir</button></div><section><div class=\"section-head\"><h2>Sections héro</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-hero\"></div></section><section><div class=\"section-head\"><h2>Boutons &amp; appels à l'action</h2><span></span><div class=\"rule\"></div></div><div class=\"grid two\" id=\"kwb-grid-cta\"></div></section><section><div class=\"section-head\"><h2>Bannières &amp; barres</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-ban\"></div></section><section><div class=\"section-head\"><h2>Blocs de contenu</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-con\"></div></section><section><div class=\"section-head\"><h2>Blocs sociaux</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-soc\"></div></section><section><div class=\"section-head\"><h2>Blocs promo</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-pro\"></div></section><section><div class=\"section-head\"><h2>Page de paiement</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-pay\"></div></section><section><div class=\"section-head\"><h2>Page de remerciement</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-mer\"></div></section><div class=\"kwb-note\"><p><strong>Un seul bloc se superpose au contenu</strong> : la progression de lecture, un filet collé en haut de l’écran. Il reste dans le flux dans l’éditeur Système.io, sinon il recouvrirait le bouton Enregistrer.</p><p>Si tu insères deux fois le même bloc sur une page, garde un seul exemplaire de son <code>&lt;style&gt;</code> et de son <code>&lt;script&gt;</code>.</p></div>";
 /* =========================================================
@@ -582,10 +582,10 @@ code:
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire, celle du halo */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
-'  --taille:18px;     /* ICI : la taille du texte */\n' +
+'  --taille:16px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:999px;   /* ICI : l’arrondi. 999px = tout rond, 12px = doux, 0 = carré */\n' +
-'  --hauteur:16px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
-'  --largeur:34px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
+'  --hauteur:13px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
+'  --largeur:26px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
 '  /* ICI : ta police. Écris inherit pour reprendre celle de la page. */\n' +
 '  --f:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;\n' +
 '\n' +
@@ -685,10 +685,10 @@ code:
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
-'  --taille:18px;     /* ICI : la taille du texte */\n' +
+'  --taille:16px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:14px;    /* ICI : l’arrondi. 999px = tout rond, 14px = doux, 0 = carré */\n' +
-'  --hauteur:16px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
-'  --largeur:36px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
+'  --hauteur:13px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
+'  --largeur:26px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
 '  /* ICI : ta police. Écris inherit pour reprendre celle de la page. */\n' +
 '  --f:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;\n' +
 '\n' +
@@ -788,10 +788,10 @@ code:
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
-'  --taille:18px;     /* ICI : la taille du texte */\n' +
+'  --taille:16px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:999px;   /* ICI : l’arrondi. 999px = tout rond, 14px = doux, 0 = carré */\n' +
-'  --hauteur:16px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
-'  --largeur:36px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
+'  --hauteur:13px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
+'  --largeur:26px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
 '  --vitesse:4s;      /* ICI : le temps entre deux passages du reflet */\n' +
 '  /* ICI : ta police. Écris inherit pour reprendre celle de la page. */\n' +
 '  --f:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;\n' +
@@ -876,10 +876,10 @@ code:
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
 '  --ok:#14805F;      /* ICI : la couleur de la confirmation */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
-'  --taille:18px;     /* ICI : la taille du texte */\n' +
+'  --taille:16px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:12px;    /* ICI : l’arrondi. 999px = tout rond, 12px = doux, 0 = carré */\n' +
-'  --hauteur:16px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
-'  --largeur:28px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
+'  --hauteur:13px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
+'  --largeur:22px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
 '  /* ICI : ta police. Écris inherit pour reprendre celle de la page. */\n' +
 '  --f:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;\n' +
 '\n' +
@@ -987,10 +987,10 @@ code:
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
 '  --bg:#ffffff;      /* ICI : la couleur de fond de ta section */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
-'  --taille:17px;     /* ICI : la taille du texte */\n' +
+'  --taille:15px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:999px;   /* ICI : l’arrondi. 999px = tout rond, 14px = doux, 0 = carré */\n' +
-'  --hauteur:15px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
-'  --largeur:32px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
+'  --hauteur:12px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
+'  --largeur:24px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
 '  --liseret:3px;      /* ICI : la largeur du liseré autour du bouton */\n' +
 '  --vitesse:4.5s;    /* ICI : le temps que met la comète à faire un tour */\n' +
 '  /* ICI : ta police. Écris inherit pour reprendre celle de la page. */\n' +
@@ -1083,10 +1083,10 @@ code:
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte au survol */\n' +
-'  --taille:17px;     /* ICI : la taille du texte */\n' +
+'  --taille:15px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:999px;   /* ICI : l’arrondi. 999px = tout rond, 14px = doux, 0 = carré */\n' +
-'  --hauteur:14px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
-'  --largeur:30px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
+'  --hauteur:11px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
+'  --largeur:22px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
 '  --trait:1.5px;     /* ICI : l’épaisseur du contour */\n' +
 '  /* ICI : ta police. Écris inherit pour reprendre celle de la page. */\n' +
 '  --f:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;\n' +
@@ -1169,12 +1169,12 @@ code:
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte du bouton */\n' +
 '  --gris:#5E666A;    /* ICI : la couleur des garanties, sous le bouton */\n' +
-'  --taille:19px;     /* ICI : la taille du texte du bouton */\n' +
+'  --taille:17px;     /* ICI : la taille du texte du bouton */\n' +
 '  --taille2:16px;    /* ICI : la taille de la ligne de prix */\n' +
 '  --taille3:15px;    /* ICI : la taille des garanties */\n' +
 '  --arrondi:14px;    /* ICI : l’arrondi. 999px = tout rond, 14px = doux, 0 = carré */\n' +
-'  --hauteur:17px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
-'  --largeur:24px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
+'  --hauteur:14px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
+'  --largeur:20px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
 '  --large-max:380px; /* ICI : la largeur maximale du bouton */\n' +
 '  /* ICI : ta police. Écris inherit pour reprendre celle de la page. */\n' +
 '  --f:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;\n' +
@@ -1272,10 +1272,10 @@ code:
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
 '  --dos:#3B3A6B;     /* ICI : la couleur de la face arrière */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
-'  --taille:18px;     /* ICI : la taille du texte */\n' +
+'  --taille:16px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:999px;   /* ICI : l’arrondi. 999px = tout rond, 14px = doux, 0 = carré */\n' +
-'  --hauteur:16px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
-'  --largeur:34px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
+'  --hauteur:13px;    /* ICI : l’épaisseur du bouton, en haut et en bas */\n' +
+'  --largeur:26px;    /* ICI : l’espace à gauche et à droite du texte */\n' +
 '  --duree:.55s;      /* ICI : la durée du retournement */\n' +
 '  /* ICI : ta police. Écris inherit pour reprendre celle de la page. */\n' +
 '  --f:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;\n' +
