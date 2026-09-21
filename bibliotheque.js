@@ -5634,34 +5634,6 @@ function melange(a,b,t){
   }
   return o;
 }
-/* Bouton « Personnaliser » : ouvre une nouvelle conversation Claude,
-   avec le bloc (et les couleurs choisies) déjà prêt dans le message. */
-function messageClaude(item){
-  return "Bonjour Claude ! Je veux personnaliser le bloc « " + item.name + " » de la bibliothèque Koweb, pour ma page Système.io.\n\n" +
-    "Commence par me demander ce que je veux changer (textes, couleurs, prix, liens, dates…). " +
-    "Ensuite, rends-moi le code complet, prêt à coller dans un élément « Code personnalisé » de Système.io.\n\n" +
-    "Règles à respecter :\n" +
-    "- Ne modifie que ce que je demande : les valeurs de l’encadré RÉGLAGES, les textes visibles, les liens (href, data-url) et les attributs data- (dates, prix, mots, codes).\n" +
-    "- Garde tout le reste à l’identique : balises, classes, CSS, JavaScript et commentaires.\n" +
-    "- Couleurs en #RRGGBB. Si --c1 ou --c2 change, recalcule --c2d : un mélange des deux, un peu plus proche de --c1, assez foncé pour qu’un texte blanc reste lisible.\n" +
-    "- Pour un bloc d’une seule couleur sans dégradé, mets --uni:1;.\n" +
-    "- Dates au format AAAA-MM-JJTHH:MM:SS.\n" +
-    "- Si un texte apparaît en double (rubans qui défilent), modifie les deux copies.\n" +
-    "- Donne toujours le bloc entier, dans un seul bloc de code, puis explique en une phrase ce que tu as changé.\n\n" +
-    "Voici le code du bloc :\n\n```html\n" + currentCode(item) + "\n```";
-}
-function ouvrirClaude(item){
-  var msg=messageClaude(item);
-  /* copie de secours : si le message n’apparaît pas, il suffit de coller (Ctrl+V) */
-  try{
-    var ta=document.createElement("textarea");
-    ta.value=msg; ta.style.position="fixed"; ta.style.opacity="0"; ta.style.left="-9999px";
-    document.body.appendChild(ta); ta.select(); document.execCommand("copy"); document.body.removeChild(ta);
-  }catch(e){}
-  try{ if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(msg).catch(function(){}); } }catch(e){}
-  var q = msg.length<13500 ? msg : "J’ai copié un bloc de la bibliothèque Koweb : je le colle juste en dessous.";
-  window.open("https://claude.ai/new?q="+encodeURIComponent(q),"_blank","noopener");
-}
 function currentCode(item){
   var c1=document.getElementById("kwb-c1").value;
   var c2=document.getElementById("kwb-c2").value;
@@ -5696,9 +5668,8 @@ function buildCard(item){
   foot.appendChild(copy); foot.appendChild(see);
   var ai=document.createElement("button");
   ai.type="button"; ai.className="btn btn-ai"; ai.textContent="Personnaliser";
-  ai.hidden=false;
-  ai.title="Ouvre une conversation avec Claude pour personnaliser ce bloc";
-  ai.addEventListener("click",function(){ ouvrirClaude(item); });
+  ai.hidden=!LIEN_ASSISTANT;
+  ai.addEventListener("click",function(){ window.open(LIEN_ASSISTANT+"#bloc="+encodeURIComponent(item.id),"_blank","noopener"); });
   foot.appendChild(ai);
 
   var pre=document.createElement("pre");
