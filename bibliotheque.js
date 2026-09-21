@@ -8,9 +8,9 @@
     RACINE.setAttribute("data-kwb-pret","1");
     var LIEN_ASSISTANT=RACINE.getAttribute("data-assistant")||"";
     var st=document.createElement("style");
-    st.textContent="\n#koweb-bibliotheque{\n  --kw-fond:#F4F4FB;--kw-surface:#FFFFFF;--kw-surface-2:#F7F7FC;--kw-encre:#1B1E2B;\n  --kw-gris:#5E6272;--kw-ligne:#DCDCEA;--kw-ligne-2:#E9E9F3;--kw-accent:#6566D6;\n  --kw-accent-txt:#FFFFFF;--kw-sombre:#11141B;\n  --kw-ombre:0 1px 2px rgba(27,30,43,.05),0 12px 28px -18px rgba(27,30,43,.35);\n  display:block;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:var(--kw-encre);line-height:1.6;\n  text-align:left;padding:8px 0 24px\n}\n#koweb-bibliotheque, #koweb-bibliotheque *{box-sizing:border-box}\n#koweb-bibliotheque .section-head h2, #koweb-bibliotheque .card-head h3, #koweb-bibliotheque .card-head p, #koweb-bibliotheque .kwb-panel h2, #koweb-bibliotheque .kwb-note p{margin:0;padding:0;text-transform:none;letter-spacing:normal}\n#koweb-bibliotheque .btn, #koweb-bibliotheque .kwb-reset{font-family:inherit;text-transform:none;letter-spacing:normal;\n  box-shadow:none;min-height:0;line-height:1}\n#koweb-bibliotheque .kwb-panel{background:var(--kw-surface);border:1px solid var(--kw-ligne);\n  border-radius:14px;padding:18px 20px;box-shadow:var(--kw-ombre);\n  display:flex;flex-wrap:wrap;gap:20px;align-items:center}\n#koweb-bibliotheque .kwb-panel h2{font-size:17px;font-weight:700;color:var(--kw-encre);\n  flex:1 1 220px;line-height:1.35}\n#koweb-bibliotheque .kwb-panel h2 small{display:block;font-weight:400;font-size:14px;color:var(--kw-gris)}\n#koweb-bibliotheque .kwb-swatch{display:flex;align-items:center;gap:10px}\n#koweb-bibliotheque .kwb-swatch label{font-size:14px;color:var(--kw-gris);font-weight:600;margin:0}\n#koweb-bibliotheque .kwb-swatch input[type=color]{width:44px;height:36px;padding:0;margin:0;\n  border:1px solid var(--kw-ligne);border-radius:9px;background:var(--kw-surface);cursor:pointer}\n#koweb-bibliotheque .kwb-reset{border:1px solid var(--kw-ligne);background:var(--kw-surface-2);\n  color:var(--kw-gris);font-size:14px;font-weight:600;padding:10px 14px;\n  border-radius:9px;cursor:pointer}\n#koweb-bibliotheque .kwb-reset:hover{color:var(--kw-encre);border-color:var(--kw-gris)}\n#koweb-bibliotheque .section-head{margin:48px 0 20px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}\n#koweb-bibliotheque .section-head h2{font-size:26px;font-weight:800;color:var(--kw-encre);line-height:1.2}\n#koweb-bibliotheque .section-head span{font-size:14px;color:var(--kw-gris)}\n#koweb-bibliotheque .rule{height:1px;background:var(--kw-ligne);flex:1 1 60px;min-width:40px}\n#koweb-bibliotheque .grid{display:grid;gap:18px}\n#koweb-bibliotheque .grid.two{grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr))}\n#koweb-bibliotheque .card{min-width:0;background:var(--kw-surface);border:1px solid var(--kw-ligne);\n  border-radius:14px;overflow:hidden;box-shadow:var(--kw-ombre);\n  display:flex;flex-direction:column}\n#koweb-bibliotheque .card-head{padding:16px 18px 12px;display:flex;gap:12px;align-items:flex-start}\n#koweb-bibliotheque .card-head h3{font-size:18px;font-weight:700;color:var(--kw-encre);\n  margin:0 0 4px;line-height:1.25}\n#koweb-bibliotheque .card-head p{font-size:14.5px;color:var(--kw-gris);line-height:1.5}\n#koweb-bibliotheque .tag{flex:none;font:600 11px/1 ui-monospace,\"SFMono-Regular\",Menlo,Consolas,monospace;\n  letter-spacing:.04em;color:var(--kw-gris);background:var(--kw-surface-2);\n  border:1px solid var(--kw-ligne-2);padding:5px 8px;border-radius:6px;margin-top:2px}\n#koweb-bibliotheque .stage{border-top:1px solid var(--kw-ligne-2);border-bottom:1px solid var(--kw-ligne-2);\n  background:var(--kw-surface-2);transform:translateZ(0);position:relative;\n  overflow:hidden;min-height:130px;display:flex;flex-direction:column;justify-content:center}\n#koweb-bibliotheque .stage > *{min-width:0;max-width:100%}\n#koweb-bibliotheque .stage.dark{background:var(--kw-sombre)}\n#koweb-bibliotheque .stage.tall{min-height:210px}\n#koweb-bibliotheque .card-foot{padding:10px 12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}\n#koweb-bibliotheque .btn{font-size:13px;font-weight:700;border-radius:8px;padding:7px 10px;white-space:nowrap;line-height:1.2;cursor:pointer;\n  border:1px solid transparent;transition:background .15s,border-color .15s,color .15s}\n#koweb-bibliotheque .btn-primary{background:var(--kw-accent);color:var(--kw-accent-txt)}\n#koweb-bibliotheque .btn-primary:hover{filter:brightness(1.08)}\n#koweb-bibliotheque .btn-ghost{background:transparent;color:var(--kw-gris);border-color:var(--kw-ligne)}\n#koweb-bibliotheque .btn-ghost:hover{color:var(--kw-encre);border-color:var(--kw-gris)}\n#koweb-bibliotheque .btn-ai{background:transparent;color:var(--kw-accent);border-color:var(--kw-accent)}\n#koweb-bibliotheque .btn-ai:hover{background:var(--kw-accent);color:var(--kw-accent-txt)}\n#koweb-bibliotheque [hidden]{display:none!important}\n#koweb-bibliotheque pre.code{margin:0;border:0;border-top:1px solid var(--kw-ligne-2);border-radius:0;\n  background:var(--kw-surface-2);padding:16px;overflow-x:auto;\n  font-family:ui-monospace,\"SFMono-Regular\",Menlo,Consolas,monospace;\n  font-size:12.5px;line-height:1.65;color:var(--kw-encre);white-space:pre;\n  tab-size:2;max-height:420px}\n#koweb-bibliotheque pre.code .ici{display:inline-block;width:100%;color:#B3261E;font-weight:600;\n  background:rgba(179,38,30,.08)}\n#koweb-bibliotheque .kwb-note{margin-top:48px;padding-top:20px;border-top:1px solid var(--kw-ligne);\n  color:var(--kw-gris);font-size:14.5px}\n#koweb-bibliotheque .kwb-note p{margin:0 0 8px;max-width:72ch}\n#koweb-bibliotheque .kwb-note code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em}\n@media (max-width:520px){ #koweb-bibliotheque .kwb-panel{gap:14px} }\n";
+    st.textContent="\n#koweb-bibliotheque{\n  --kw-fond:#F4F4FB;--kw-surface:#FFFFFF;--kw-surface-2:#F7F7FC;--kw-encre:#1B1E2B;\n  --kw-gris:#5E6272;--kw-ligne:#DCDCEA;--kw-ligne-2:#E9E9F3;--kw-accent:#6566D6;\n  --kw-accent-txt:#FFFFFF;--kw-sombre:#11141B;\n  --kw-ombre:0 1px 2px rgba(27,30,43,.05),0 12px 28px -18px rgba(27,30,43,.35);\n  display:block;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:var(--kw-encre);line-height:1.6;\n  text-align:left;padding:8px 0 24px\n}\n#koweb-bibliotheque, #koweb-bibliotheque *{box-sizing:border-box}\n#koweb-bibliotheque .section-head h2, #koweb-bibliotheque .card-head h3, #koweb-bibliotheque .card-head p, #koweb-bibliotheque .kwb-panel h2, #koweb-bibliotheque .kwb-note p{margin:0;padding:0;text-transform:none;letter-spacing:normal}\n#koweb-bibliotheque .btn, #koweb-bibliotheque .kwb-reset{font-family:inherit;text-transform:none;letter-spacing:normal;\n  box-shadow:none;min-height:0;line-height:1}\n#koweb-bibliotheque .kwb-panel{background:var(--kw-surface);border:1px solid var(--kw-ligne);\n  border-radius:14px;padding:18px 20px;box-shadow:var(--kw-ombre);\n  display:flex;flex-wrap:wrap;gap:20px;align-items:center}\n#koweb-bibliotheque .kwb-panel h2{font-size:17px;font-weight:700;color:var(--kw-encre);\n  flex:1 1 220px;line-height:1.35}\n#koweb-bibliotheque .kwb-panel h2 small{display:block;font-weight:400;font-size:14px;color:var(--kw-gris)}\n#koweb-bibliotheque .kwb-swatch{display:flex;align-items:center;gap:10px}\n#koweb-bibliotheque .kwb-swatch label{font-size:14px;color:var(--kw-gris);font-weight:600;margin:0}\n#koweb-bibliotheque .kwb-swatch input[type=color]{width:44px;height:36px;padding:0;margin:0;\n  border:1px solid var(--kw-ligne);border-radius:9px;background:var(--kw-surface);cursor:pointer}\n#koweb-bibliotheque .kwb-reset{border:1px solid var(--kw-ligne);background:var(--kw-surface-2);\n  color:var(--kw-gris);font-size:14px;font-weight:600;padding:10px 14px;\n  border-radius:9px;cursor:pointer}\n#koweb-bibliotheque .kwb-reset:hover{color:var(--kw-encre);border-color:var(--kw-gris)}\n#koweb-bibliotheque .kwb-seg{display:inline-flex;border:1px solid var(--kw-ligne);border-radius:9px;overflow:hidden;background:var(--kw-surface-2)}\n#koweb-bibliotheque .kwb-seg button{border:0;margin:0;background:transparent;color:var(--kw-gris);font-family:inherit;font-size:14px;font-weight:600;line-height:1;text-transform:none;letter-spacing:normal;box-shadow:none;min-height:0;border-radius:0;padding:10px 12px;cursor:pointer;white-space:nowrap}\n#koweb-bibliotheque .kwb-seg button[aria-pressed=true]{background:var(--kw-accent);color:var(--kw-accent-txt)}\n#koweb-bibliotheque .section-head{margin:48px 0 20px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}\n#koweb-bibliotheque .section-head h2{font-size:26px;font-weight:800;color:var(--kw-encre);line-height:1.2}\n#koweb-bibliotheque .section-head span{font-size:14px;color:var(--kw-gris)}\n#koweb-bibliotheque .rule{height:1px;background:var(--kw-ligne);flex:1 1 60px;min-width:40px}\n#koweb-bibliotheque .grid{display:grid;gap:18px}\n#koweb-bibliotheque .grid.two{grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr))}\n#koweb-bibliotheque .card{min-width:0;background:var(--kw-surface);border:1px solid var(--kw-ligne);\n  border-radius:14px;overflow:hidden;box-shadow:var(--kw-ombre);\n  display:flex;flex-direction:column}\n#koweb-bibliotheque .card-head{padding:16px 18px 12px;display:flex;gap:12px;align-items:flex-start}\n#koweb-bibliotheque .card-head h3{font-size:18px;font-weight:700;color:var(--kw-encre);\n  margin:0 0 4px;line-height:1.25}\n#koweb-bibliotheque .card-head p{font-size:14.5px;color:var(--kw-gris);line-height:1.5}\n#koweb-bibliotheque .tag{flex:none;font:600 11px/1 ui-monospace,\"SFMono-Regular\",Menlo,Consolas,monospace;\n  letter-spacing:.04em;color:var(--kw-gris);background:var(--kw-surface-2);\n  border:1px solid var(--kw-ligne-2);padding:5px 8px;border-radius:6px;margin-top:2px}\n#koweb-bibliotheque .stage{border-top:1px solid var(--kw-ligne-2);border-bottom:1px solid var(--kw-ligne-2);\n  background:var(--kw-surface-2);transform:translateZ(0);position:relative;\n  overflow:hidden;min-height:130px;display:flex;flex-direction:column;justify-content:center}\n#koweb-bibliotheque .stage > *{min-width:0;max-width:100%}\n#koweb-bibliotheque .stage.dark{background:var(--kw-sombre)}\n#koweb-bibliotheque .stage.tall{min-height:210px}\n#koweb-bibliotheque .card-foot{padding:10px 12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}\n#koweb-bibliotheque .btn{font-size:13px;font-weight:700;border-radius:8px;padding:7px 10px;white-space:nowrap;line-height:1.2;cursor:pointer;\n  border:1px solid transparent;transition:background .15s,border-color .15s,color .15s}\n#koweb-bibliotheque .btn-primary{background:var(--kw-accent);color:var(--kw-accent-txt)}\n#koweb-bibliotheque .btn-primary:hover{filter:brightness(1.08)}\n#koweb-bibliotheque .btn-ghost{background:transparent;color:var(--kw-gris);border-color:var(--kw-ligne)}\n#koweb-bibliotheque .btn-ghost:hover{color:var(--kw-encre);border-color:var(--kw-gris)}\n#koweb-bibliotheque .btn-ai{background:transparent;color:var(--kw-accent);border-color:var(--kw-accent)}\n#koweb-bibliotheque .btn-ai:hover{background:var(--kw-accent);color:var(--kw-accent-txt)}\n#koweb-bibliotheque [hidden]{display:none!important}\n#koweb-bibliotheque pre.code{margin:0;border:0;border-top:1px solid var(--kw-ligne-2);border-radius:0;\n  background:var(--kw-surface-2);padding:16px;overflow-x:auto;\n  font-family:ui-monospace,\"SFMono-Regular\",Menlo,Consolas,monospace;\n  font-size:12.5px;line-height:1.65;color:var(--kw-encre);white-space:pre;\n  tab-size:2;max-height:420px}\n#koweb-bibliotheque pre.code .ici{display:inline-block;width:100%;color:#B3261E;font-weight:600;\n  background:rgba(179,38,30,.08)}\n#koweb-bibliotheque .kwb-note{margin-top:48px;padding-top:20px;border-top:1px solid var(--kw-ligne);\n  color:var(--kw-gris);font-size:14.5px}\n#koweb-bibliotheque .kwb-note p{margin:0 0 8px;max-width:72ch}\n#koweb-bibliotheque .kwb-note code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em}\n@media (max-width:520px){ #koweb-bibliotheque .kwb-panel{gap:14px} }\n";
     document.head.appendChild(st);
-    RACINE.innerHTML="<div class=\"kwb-panel\"><h2>Teste tes couleurs<small>Les aperçus et le code copié se mettent à jour en direct.</small></h2><div class=\"kwb-swatch\"><label for=\"kwb-c1\">Principale</label><input type=\"color\" id=\"kwb-c1\" value=\"#7D7EE1\"></div><div class=\"kwb-swatch\"><label for=\"kwb-c2\">Lumineuse</label><input type=\"color\" id=\"kwb-c2\" value=\"#C6BCFF\"></div><button class=\"kwb-reset\" id=\"kwb-reset\" type=\"button\">Rétablir</button></div><section><div class=\"section-head\"><h2>Sections héro</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-hero\"></div></section><section><div class=\"section-head\"><h2>Boutons &amp; appels à l'action</h2><span></span><div class=\"rule\"></div></div><div class=\"grid two\" id=\"kwb-grid-cta\"></div></section><section><div class=\"section-head\"><h2>Bannières &amp; barres</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-ban\"></div></section><section><div class=\"section-head\"><h2>Blocs de contenu</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-con\"></div></section><section><div class=\"section-head\"><h2>Blocs sociaux</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-soc\"></div></section><section><div class=\"section-head\"><h2>Blocs promo</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-pro\"></div></section><section><div class=\"section-head\"><h2>Page de paiement</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-pay\"></div></section><section><div class=\"section-head\"><h2>Page de remerciement</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-mer\"></div></section><div class=\"kwb-note\"><p><strong>Un seul bloc se superpose au contenu</strong> : la progression de lecture, un filet collé en haut de l’écran. Il reste dans le flux dans l’éditeur Système.io, sinon il recouvrirait le bouton Enregistrer.</p><p>Si tu insères deux fois le même bloc sur une page, garde un seul exemplaire de son <code>&lt;style&gt;</code> et de son <code>&lt;script&gt;</code>.</p></div>";
+    RACINE.innerHTML="<div class=\"kwb-panel\"><h2>Teste tes couleurs<small>Les aperçus et le code copié se mettent à jour en direct.</small></h2><div class=\"kwb-swatch\"><label for=\"kwb-c1\">Principale</label><input type=\"color\" id=\"kwb-c1\" value=\"#7D7EE1\"></div><div class=\"kwb-swatch\"><label for=\"kwb-c2\">Lumineuse</label><input type=\"color\" id=\"kwb-c2\" value=\"#C6BCFF\"></div><div class=\"kwb-seg\" role=\"group\" aria-label=\"Style de couleur\"><button type=\"button\" id=\"kwb-uni-off\" aria-pressed=\"true\">Dégradé</button><button type=\"button\" id=\"kwb-uni-on\" aria-pressed=\"false\">Une seule couleur</button></div><button class=\"kwb-reset\" id=\"kwb-reset\" type=\"button\">Rétablir</button></div><section><div class=\"section-head\"><h2>Sections héro</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-hero\"></div></section><section><div class=\"section-head\"><h2>Boutons &amp; appels à l'action</h2><span></span><div class=\"rule\"></div></div><div class=\"grid two\" id=\"kwb-grid-cta\"></div></section><section><div class=\"section-head\"><h2>Bannières &amp; barres</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-ban\"></div></section><section><div class=\"section-head\"><h2>Blocs de contenu</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-con\"></div></section><section><div class=\"section-head\"><h2>Blocs sociaux</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-soc\"></div></section><section><div class=\"section-head\"><h2>Blocs promo</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-pro\"></div></section><section><div class=\"section-head\"><h2>Page de paiement</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-pay\"></div></section><section><div class=\"section-head\"><h2>Page de remerciement</h2><span></span><div class=\"rule\"></div></div><div class=\"grid\" id=\"kwb-grid-mer\"></div></section><div class=\"kwb-note\"><p><strong>Un seul bloc se superpose au contenu</strong> : la progression de lecture, un filet collé en haut de l’écran. Il reste dans le flux dans l’éditeur Système.io, sinon il recouvrirait le bouton Enregistrer.</p><p>Si tu insères deux fois le même bloc sur une page, garde un seul exemplaire de son <code>&lt;style&gt;</code> et de son <code>&lt;script&gt;</code>.</p></div>";
 /* =========================================================
    Les blocs. Chaque entrée est le code exact que l'on copie.
    ========================================================= */
@@ -581,6 +581,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire, celle du halo */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --taille:16px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:999px;   /* ICI : l’arrondi. 999px = tout rond, 12px = doux, 0 = carré */\n' +
@@ -640,6 +641,10 @@ code:
 '}\n' +
 '\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-halo-wrap{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-halo-wrap{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-halo-wrap, .sio-halo-wrap *{box-sizing:border-box}\n' +
 '.sio-halo-wrap{display:flex;justify-content:center;padding:34px 16px}\n' +
@@ -650,7 +655,7 @@ code:
 '  color:var(--txt);font-family:var(--f);font-weight:700;\n' +
 '  font-size:var(--taille);line-height:1;letter-spacing:.08em;\n' +
 '  text-transform:uppercase;white-space:nowrap;\n' +
-'  background:linear-gradient(110deg,var(--c1),var(--c2d),var(--c1));\n' +
+'  background:linear-gradient(110deg,var(--c1),var(--g2d),var(--c1));\n' +
 '  background-size:220% 100%;\n' +
 '  animation:sioHaloShift 7s ease-in-out infinite, sioHaloPulse 3.4s ease-in-out infinite;\n' +
 '  transition:transform .25s ease}\n' +
@@ -684,6 +689,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --taille:16px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:14px;    /* ICI : l’arrondi. 999px = tout rond, 14px = doux, 0 = carré */\n' +
@@ -736,6 +742,10 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-mag-wrap{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-mag-wrap{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-mag-wrap, .sio-mag-wrap *{box-sizing:border-box}\n' +
 '.sio-mag-wrap{display:flex;justify-content:center;padding:34px 16px}\n' +
@@ -745,7 +755,7 @@ code:
 '  text-decoration:none;color:var(--txt);font-family:var(--f);font-weight:700;\n' +
 '  font-size:var(--taille);line-height:1;letter-spacing:.08em;\n' +
 '  text-transform:uppercase;white-space:nowrap;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 16px 36px -18px var(--c1);\n' +
 '  transition:transform .18s cubic-bezier(.22,1,.36,1),box-shadow .25s ease;\n' +
 '  will-change:transform}\n' +
@@ -787,6 +797,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --taille:16px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:999px;   /* ICI : l’arrondi. 999px = tout rond, 14px = doux, 0 = carré */\n' +
@@ -835,6 +846,10 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-shine-wrap{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-shine-wrap{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-shine-wrap, .sio-shine-wrap *{box-sizing:border-box}\n' +
 '.sio-shine-wrap{display:flex;justify-content:center;padding:34px 16px}\n' +
@@ -844,7 +859,7 @@ code:
 '  border-radius:var(--arrondi);text-decoration:none;color:var(--txt);\n' +
 '  font-family:var(--f);font-weight:700;font-size:var(--taille);line-height:1;\n' +
 '  letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 14px 32px -16px var(--c1);transition:transform .2s ease}\n' +
 '.sio-shine-wrap .sio-shine:hover{transform:scale(1.03)}\n' +
 '.sio-shine-wrap .sio-shine::after{content:"";position:absolute;top:-60%;left:-40%;\n' +
@@ -874,6 +889,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --ok:#14805F;      /* ICI : la couleur de la confirmation */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --taille:16px;     /* ICI : la taille du texte */\n' +
@@ -927,6 +943,10 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-state-wrap{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-state-wrap{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-state-wrap, .sio-state-wrap *{box-sizing:border-box}\n' +
 '.sio-state-wrap{display:flex;justify-content:center;padding:34px 16px}\n' +
@@ -935,7 +955,7 @@ code:
 '  padding:var(--hauteur) var(--largeur);border:0;border-radius:var(--arrondi);\n' +
 '  cursor:pointer;color:var(--txt);font-family:var(--f);font-weight:700;\n' +
 '  font-size:var(--taille);line-height:1;letter-spacing:.07em;text-transform:uppercase;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 14px 32px -16px var(--c1);transition:background .3s ease}\n' +
 '.sio-state-wrap .sio-state[data-s="load"]{cursor:wait;opacity:.9}\n' +
 '.sio-state-wrap .sio-state[data-s="done"]{background:var(--ok)}\n' +
@@ -985,6 +1005,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire, celle de la comète */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --bg:#ffffff;      /* ICI : la couleur de fond de ta section */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --taille:15px;     /* ICI : la taille du texte */\n' +
@@ -1038,6 +1059,10 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-ring-wrap{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-ring-wrap{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-ring-wrap, .sio-ring-wrap *{box-sizing:border-box}\n' +
 '.sio-ring-wrap{display:flex;justify-content:center;padding:34px 16px}\n' +
@@ -1054,11 +1079,11 @@ code:
 '.sio-ring-wrap .sio-ring a{position:relative;display:block;\n' +
 '  padding:var(--hauteur) var(--largeur);border-radius:var(--arrondi);\n' +
 '  color:var(--txt);text-decoration:none;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  font-family:var(--f);font-weight:700;font-size:var(--taille);line-height:1;\n' +
 '  letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;\n' +
 '  transition:background .25s ease}\n' +
-'.sio-ring-wrap .sio-ring a:hover{background:linear-gradient(135deg,var(--c2d),var(--c1))}\n' +
+'.sio-ring-wrap .sio-ring a:hover{background:linear-gradient(135deg,var(--g2d),var(--c1))}\n' +
 '@keyframes sioRingSpin{to{transform:rotate(360deg)}}\n' +
 '@media (max-width:480px){\n' +
 '  .sio-ring-wrap .sio-ring a{font-size:calc(var(--taille) - 2px);\n' +
@@ -1082,6 +1107,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale, celle du contour et du texte */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte au survol */\n' +
 '  --taille:15px;     /* ICI : la taille du texte */\n' +
 '  --arrondi:999px;   /* ICI : l’arrondi. 999px = tout rond, 14px = doux, 0 = carré */\n' +
@@ -1128,6 +1154,10 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-ghost-wrap{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-ghost-wrap{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-ghost-wrap, .sio-ghost-wrap *{box-sizing:border-box}\n' +
 '.sio-ghost-wrap{display:flex;justify-content:center;padding:34px 16px}\n' +
@@ -1141,7 +1171,7 @@ code:
 '  letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;\n' +
 '  transition:color .3s ease,border-color .3s ease}\n' +
 '.sio-ghost-wrap .sio-ghost::before{content:"";position:absolute;inset:0;z-index:0;\n' +
-'  background:linear-gradient(120deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(120deg,var(--c1),var(--g2d));\n' +
 '  transform:translateY(101%);transition:transform .38s cubic-bezier(.22,1,.36,1)}\n' +
 '.sio-ghost-wrap .sio-ghost span{position:relative;z-index:1;flex:none}\n' +
 '.sio-ghost-wrap .sio-ghost:hover{color:var(--txt);border-color:var(--c2d)}\n' +
@@ -1167,6 +1197,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte du bouton */\n' +
 '  --gris:#5E666A;    /* ICI : la couleur des garanties, sous le bouton */\n' +
 '  --taille:17px;     /* ICI : la taille du texte du bouton */\n' +
@@ -1225,6 +1256,10 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-rea{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-rea{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-rea, .sio-rea *{box-sizing:border-box}\n' +
 '.sio-rea{display:flex;flex-direction:column;align-items:center;gap:14px;\n' +
@@ -1232,7 +1267,7 @@ code:
 '.sio-rea .sio-rea-btn{display:block;width:100%;max-width:var(--large-max);\n' +
 '  padding:var(--hauteur) var(--largeur);border-radius:var(--arrondi);\n' +
 '  text-decoration:none;color:var(--txt);font-family:var(--f);\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 16px 34px -18px var(--c1);transition:transform .2s ease}\n' +
 '.sio-rea .sio-rea-btn:hover{transform:translateY(-2px)}\n' +
 '.sio-rea .sio-rea-btn b{display:block;font-weight:700;font-size:var(--taille);\n' +
@@ -1270,6 +1305,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale, la face avant */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --dos:#3B3A6B;     /* ICI : la couleur de la face arrière */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --taille:16px;     /* ICI : la taille du texte */\n' +
@@ -1325,6 +1361,10 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-fp-wrap{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-fp-wrap{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-fp-wrap, .sio-fp-wrap *{box-sizing:border-box}\n' +
 '.sio-fp-wrap{display:flex;justify-content:center;padding:34px 16px;\n' +
@@ -1341,7 +1381,7 @@ code:
 '  font-size:var(--taille);line-height:1.2;letter-spacing:.07em;\n' +
 '  text-transform:uppercase;text-align:center;\n' +
 '  -webkit-backface-visibility:hidden;backface-visibility:hidden}\n' +
-'.sio-fp-wrap .sio-fp-av{background:linear-gradient(135deg,var(--c1),var(--c2d))}\n' +
+'.sio-fp-wrap .sio-fp-av{background:linear-gradient(135deg,var(--c1),var(--g2d))}\n' +
 '.sio-fp-wrap .sio-fp-ar{position:absolute;inset:0;background:var(--dos);\n' +
 '  transform:rotateY(180deg)}\n' +
 '@media (max-width:480px){\n' +
@@ -1378,6 +1418,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte de la barre */\n' +
 '  --btn-fond:#ffffff;/* ICI : la couleur du bouton */\n' +
 '  --btn-txt:#1A1A22; /* ICI : la couleur du texte du bouton */\n' +
@@ -1444,13 +1485,17 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-cd{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-cd{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-cd, .sio-cd *{box-sizing:border-box}\n' +
 '.sio-cd{position:var(--pos);top:0;z-index:9999;\n' +
 '  display:flex;align-items:center;justify-content:center;gap:10px 22px;flex-wrap:wrap;\n' +
 '  padding:var(--hauteur) 16px;color:var(--txt);text-align:center;\n' +
 '  font-family:var(--f);font-weight:600;font-size:var(--taille);line-height:1.3;\n' +
-'  background:linear-gradient(105deg,var(--c1),var(--c2d),var(--c1));\n' +
+'  background:linear-gradient(105deg,var(--c1),var(--g2d),var(--c1));\n' +
 '  background-size:220% 100%;animation:sioCdShift 9s ease-in-out infinite}\n' +
 '.sio-cd b{font-weight:800}\n' +
 '.sio-cd-t{display:inline-flex;gap:6px;font-variant-numeric:tabular-nums}\n' +
@@ -1507,6 +1552,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur des chiffres */\n' +
 '  --gris:#6E757A;    /* ICI : la couleur de la ligne au-dessus */\n' +
 '  --chiffre:32px;    /* ICI : la taille des chiffres */\n' +
@@ -1550,6 +1596,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-tm{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-tm{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-tm, .sio-tm *{box-sizing:border-box}\n' +
 '.sio-tm{padding:30px 16px;text-align:center;font-family:var(--f)}\n' +
@@ -1557,7 +1607,7 @@ code:
 '  text-transform:uppercase;color:var(--gris);font-weight:700}\n' +
 '.sio-tm-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}\n' +
 '.sio-tm-row div{min-width:80px;padding:14px 10px;border-radius:var(--arrondi);\n' +
-'  color:var(--txt);background:linear-gradient(150deg,var(--c1),var(--c2d));\n' +
+'  color:var(--txt);background:linear-gradient(150deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 14px 30px -18px var(--c1)}\n' +
 '.sio-tm-row b{display:block;font-size:var(--chiffre);line-height:1;font-weight:700;\n' +
 '  font-variant-numeric:tabular-nums}\n' +
@@ -1602,6 +1652,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fond:#ffffff;    /* ICI : la couleur de fond de la carte */\n' +
 '  --bord:#E6E3E8;    /* ICI : la couleur du contour */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur du titre */\n' +
@@ -1649,6 +1700,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-jg{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-jg{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-jg, .sio-jg *{box-sizing:border-box}\n' +
 '.sio-jg{max-width:var(--large-max);margin:0 auto;padding:26px 22px;\n' +
@@ -1660,7 +1715,7 @@ code:
 '.sio-jg-top span{font-size:var(--taille2);color:var(--c1);font-weight:800}\n' +
 '.sio-jg-bar{height:11px;border-radius:999px;background:#EFEDF1;overflow:hidden}\n' +
 '.sio-jg-bar i{display:block;height:100%;width:0;border-radius:999px;\n' +
-'  background:linear-gradient(90deg,var(--c1),var(--c2));\n' +
+'  background:linear-gradient(90deg,var(--c1),var(--g2));\n' +
 '  transition:width 1.4s cubic-bezier(.22,1,.36,1)}\n' +
 '.sio-jg-foot{margin:11px 0 0;font-size:var(--taille2);font-weight:600;color:var(--gris)}\n' +
 '</style>\n' +
@@ -1699,6 +1754,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --taille:17px;     /* ICI : la taille du texte */\n' +
 '  --hauteur:15px;    /* ICI : l’épaisseur du ruban, en haut et en bas */\n' +
@@ -1743,10 +1799,14 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-rb{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-rb{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-rb, .sio-rb *{box-sizing:border-box}\n' +
 '.sio-rb{overflow:hidden;padding:var(--hauteur) 0;color:var(--txt);font-family:var(--f);\n' +
-'  background:linear-gradient(100deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(100deg,var(--c1),var(--g2d));\n' +
 '  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);\n' +
 '  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}\n' +
 '.sio-rb-track{display:flex;width:max-content;\n' +
@@ -1777,6 +1837,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --taille:16.5px;   /* ICI : la taille du texte */\n' +
 '  --hauteur:13px;    /* ICI : l’épaisseur du bandeau, en haut et en bas */\n' +
@@ -1826,12 +1887,16 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-an{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-an{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-an, .sio-an *{box-sizing:border-box}\n' +
 '.sio-an{position:relative;display:flex;align-items:center;justify-content:center;\n' +
 '  gap:14px;flex-wrap:wrap;padding:var(--hauteur) 46px;color:var(--txt);text-align:center;\n' +
 '  font-family:var(--f);font-weight:600;font-size:var(--taille);line-height:1.4;\n' +
-'  background:linear-gradient(100deg,var(--c1),var(--c2d),var(--c1));\n' +
+'  background:linear-gradient(100deg,var(--c1),var(--g2d),var(--c1));\n' +
 '  background-size:220% 100%;animation:sioAnShift 10s ease-in-out infinite}\n' +
 '.sio-an a{color:var(--txt);font-weight:800;text-underline-offset:4px}\n' +
 '.sio-an button{position:absolute;right:12px;top:50%;transform:translateY(-50%);\n' +
@@ -1872,6 +1937,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --epaisseur:5px;   /* ICI : l’épaisseur du filet */\n' +
 '  --piste:rgba(125,126,225,.16);  /* ICI : la couleur de la piste, derrière le filet */\n' +
 '  /* ICI : ta police. Écris inherit pour reprendre celle de la page. */\n' +
@@ -1913,13 +1979,17 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-pg{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-pg{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-pg, .sio-pg *{box-sizing:border-box}\n' +
 '.sio-pg{position:relative;height:var(--epaisseur);z-index:9990;background:var(--piste)}\n' +
 '/* Le collage en haut ne s active que sur la page publiée, jamais dans l éditeur. */\n' +
 '.sio-pg.sio-live{position:fixed;top:0;left:0;right:0}\n' +
 '.sio-pg i{display:block;height:100%;width:0;\n' +
-'  background:linear-gradient(90deg,var(--c1),var(--c2));\n' +
+'  background:linear-gradient(90deg,var(--c1),var(--g2));\n' +
 '  box-shadow:0 0 12px -2px var(--c2);transition:width .1s linear}\n' +
 '</style>\n' +
 '<div class="sio-pg"><i></i></div>\n' +
@@ -2168,6 +2238,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur des numéros */\n' +
 '  --fond:#ffffff;    /* ICI : la couleur de fond de ta section */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur des titres */\n' +
@@ -2217,20 +2288,24 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-tl{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-tl{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-tl, .sio-tl *{box-sizing:border-box}\n' +
 '.sio-tl{max-width:var(--large-max);margin:0 auto;padding:30px 16px;font-family:var(--f)}\n' +
 '.sio-tl ol{list-style:none;margin:0;padding:0;position:relative}\n' +
 '.sio-tl ol::before{content:"";position:absolute;left:calc(var(--pastille) / 2 - 1px);\n' +
 '  top:12px;bottom:12px;width:2px;\n' +
-'  background:linear-gradient(180deg,var(--c1),var(--c2))}\n' +
+'  background:linear-gradient(180deg,var(--c1),var(--g2))}\n' +
 '.sio-tl li{position:relative;padding:0 0 26px calc(var(--pastille) + 18px)}\n' +
 '.sio-tl li:last-child{padding-bottom:0}\n' +
 '.sio-tl li::before{content:attr(data-n);position:absolute;left:0;top:0;\n' +
 '  width:var(--pastille);height:var(--pastille);border-radius:50%;\n' +
 '  display:flex;align-items:center;justify-content:center;\n' +
 '  color:var(--txt);font-weight:700;font-size:17px;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 0 0 5px var(--fond)}\n' +
 '.sio-tl b{display:block;font-size:var(--taille);line-height:1.3;\n' +
 '  color:var(--encre);margin:9px 0 6px}\n' +
@@ -2270,6 +2345,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fond:#ffffff;    /* ICI : la couleur de fond des cartes */\n' +
 '  --bord:#E9E6F0;    /* ICI : la couleur du contour */\n' +
 '  --pastille:#F1EFFC;/* ICI : le fond du numéro */\n' +
@@ -2322,6 +2398,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-mod{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-mod{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-mod, .sio-mod *{box-sizing:border-box}\n' +
 '.sio-mod{max-width:var(--large-max);margin:0 auto;padding:30px 16px;font-family:var(--f);\n' +
@@ -2331,7 +2411,7 @@ code:
 '  border:1px solid var(--bord);border-radius:var(--arrondi);background:var(--fond);\n' +
 '  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,border-color .3s ease}\n' +
 '.sio-mod article::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;\n' +
-'  background:linear-gradient(90deg,var(--c1),var(--c2));\n' +
+'  background:linear-gradient(90deg,var(--c1),var(--g2));\n' +
 '  transform:scaleX(0);transform-origin:left;transition:transform .35s ease}\n' +
 '.sio-mod article:hover{transform:translateY(-5px);border-color:var(--c2);\n' +
 '  box-shadow:0 26px 50px -34px var(--c1)}\n' +
@@ -2373,6 +2453,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fond:#ffffff;    /* ICI : la couleur de fond des cartes */\n' +
 '  --bord:#E9E6F0;    /* ICI : la couleur du contour */\n' +
 '  --pastille:#F1EFFC;/* ICI : le fond de l’interrupteur */\n' +
@@ -2427,6 +2508,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-cmp{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-cmp{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-cmp, .sio-cmp *{box-sizing:border-box}\n' +
 '.sio-cmp{max-width:var(--large-max);margin:0 auto;padding:30px 16px;\n' +
@@ -2443,7 +2528,7 @@ code:
 '.sio-cmp-row article.reco{border-color:var(--c1);box-shadow:0 26px 54px -38px var(--c1)}\n' +
 '.sio-cmp-row article.reco::after{content:"Le plus choisi";position:absolute;top:-12px;right:20px;\n' +
 '  padding:6px 13px;border-radius:999px;color:#fff;font-size:13px;font-weight:700;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d))}\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d))}\n' +
 '.sio-cmp-row h3{margin:0 0 4px;font-size:var(--taille);color:var(--encre)}\n' +
 '.sio-cmp-row .sio-cmp-px{font-size:var(--prix);font-weight:700;color:var(--c1);line-height:1.2}\n' +
 '.sio-cmp-row ul{list-style:none;margin:18px 0 0;padding:0}\n' +
@@ -2818,6 +2903,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte des pastilles */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur du titre */\n' +
 '  --taille:15px;     /* ICI : la taille du nom des réseaux */\n' +
@@ -2863,6 +2949,10 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-rs{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-rs{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-rs, .sio-rs *{box-sizing:border-box}\n' +
 '.sio-rs{padding:28px 16px;text-align:center;font-family:var(--f)}\n' +
@@ -2871,7 +2961,7 @@ code:
 '.sio-rs a{display:inline-flex;align-items:center;gap:9px;\n' +
 '  padding:11px 18px;border-radius:var(--arrondi);text-decoration:none;\n' +
 '  color:var(--txt);font-weight:700;font-size:var(--taille);\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 12px 26px -16px var(--c1);transition:transform .2s ease}\n' +
 '.sio-rs a:hover{transform:translateY(-2px)}\n' +
 '.sio-rs svg{flex:none;width:18px;height:18px;stroke:var(--txt);fill:none;stroke-width:1.9}\n' +
@@ -2898,6 +2988,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur des pictogrammes */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur du titre */\n' +
 '  --titre:17px;      /* ICI : la taille du titre. Mets 0 pour le masquer. */\n' +
@@ -2955,6 +3046,10 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-rp{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-rp{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-rp, .sio-rp *{box-sizing:border-box}\n' +
 '.sio-rp{padding:26px 16px;text-align:center;font-family:var(--f)}\n' +
@@ -2963,7 +3058,7 @@ code:
 '.sio-rp-row{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--ecart)}\n' +
 '.sio-rp a{display:inline-flex;align-items:center;justify-content:center;\n' +
 '  width:var(--rond);height:var(--rond);border-radius:50%;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 12px 26px -16px var(--c1);\n' +
 '  transition:transform .22s cubic-bezier(.22,1,.36,1),box-shadow .22s ease}\n' +
 '.sio-rp a:hover{transform:translateY(-3px);box-shadow:0 18px 32px -16px var(--c1)}\n' +
@@ -3606,6 +3701,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fond:#F6F4FF;    /* ICI : le fond de la carte */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur du code */\n' +
 '  --gris:#6B6D74;    /* ICI : la couleur des explications */\n' +
@@ -3647,6 +3743,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-cp{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-cp{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-cp, .sio-cp *{box-sizing:border-box}\n' +
 '.sio-cp{max-width:var(--large-max);margin:0 auto;padding:26px 22px;\n' +
@@ -3662,7 +3762,7 @@ code:
 '.sio-cp button{border:0;cursor:pointer;padding:14px 22px;border-radius:12px;\n' +
 '  color:#fff;font-family:var(--f);font-weight:700;font-size:15px;\n' +
 '  letter-spacing:.06em;text-transform:uppercase;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 12px 26px -16px var(--c1);transition:transform .2s ease}\n' +
 '.sio-cp button:hover{transform:translateY(-2px)}\n' +
 '.sio-cp small{display:block;margin-top:14px;font-size:14px;color:var(--gris)}\n' +
@@ -3705,6 +3805,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fond:#ffffff;    /* ICI : le fond de la carte */\n' +
 '  --bord:#E9E6F0;    /* ICI : la couleur du contour */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur des intitulés */\n' +
@@ -3745,6 +3846,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-bd{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-bd{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-bd, .sio-bd *{box-sizing:border-box}\n' +
 '.sio-bd{max-width:var(--large-max);margin:0 auto;font-family:var(--f);\n' +
@@ -3763,7 +3868,7 @@ code:
 '.sio-bd-tot span{color:var(--gris);text-decoration:line-through;\n' +
 '  text-decoration-thickness:2px}\n' +
 '.sio-bd-fin{padding:22px 26px;text-align:center;color:#fff;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d))}\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d))}\n' +
 '.sio-bd-fin b{display:block;font-size:var(--prix);font-weight:800;line-height:1.1}\n' +
 '.sio-bd-fin em{display:block;margin-top:6px;font-style:normal;font-size:15px;opacity:.9}\n' +
 '</style>\n' +
@@ -3793,6 +3898,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fond:#ffffff;    /* ICI : le fond des paliers */\n' +
 '  --bord:#E9E6F0;    /* ICI : la couleur du contour */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur des prix */\n' +
@@ -3836,6 +3942,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-pa{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-pa{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-pa, .sio-pa *{box-sizing:border-box}\n' +
 '.sio-pa{max-width:var(--large-max);margin:0 auto;padding:28px 16px;\n' +
@@ -3844,7 +3954,7 @@ code:
 '.sio-pa-p{padding:22px 20px;border-radius:var(--arrondi);text-align:center;\n' +
 '  border:1px solid var(--bord);background:var(--fond);color:var(--gris)}\n' +
 '.sio-pa-p.actif{border-color:transparent;color:#fff;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 22px 44px -30px var(--c1)}\n' +
 '.sio-pa-p em{display:block;font-style:normal;font-size:13px;font-weight:700;\n' +
 '  letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;opacity:.85}\n' +
@@ -3995,6 +4105,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --taille:30px;     /* ICI : la taille des capitales */\n' +
 '  --espace:.14em;    /* ICI : l’espacement entre les lettres */\n' +
@@ -4043,12 +4154,16 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-op{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-op{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-op, .sio-op *{box-sizing:border-box}\n' +
 '.sio-op{overflow:hidden;padding:18px 0;font-family:var(--f)}\n' +
 '.sio-op-ligne{overflow:hidden;padding:var(--hauteur) 0;color:var(--txt);\n' +
 '  transform:rotate(var(--incline));width:104%;margin-left:-2%;\n' +
-'  background:linear-gradient(100deg,var(--c1),var(--c2d))}\n' +
+'  background:linear-gradient(100deg,var(--c1),var(--g2d))}\n' +
 '.sio-op-ligne + .sio-op-ligne{margin-top:10px;\n' +
 '  transform:rotate(calc(var(--incline) * -1));background:var(--c1)}\n' +
 '.sio-op-track{display:flex;width:max-content;\n' +
@@ -4298,6 +4413,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fait:#57C39B;    /* ICI : la couleur des étapes déjà franchies */\n' +
 '  --avenir:#D8D5E2;  /* ICI : la couleur des étapes à venir */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur de l’étape en cours */\n' +
@@ -4344,6 +4460,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-et{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-et{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-et, .sio-et *{box-sizing:border-box}\n' +
 '.sio-et{max-width:var(--large-max);margin:0 auto;padding:26px 16px;\n' +
@@ -4362,7 +4482,7 @@ code:
 '  color:#fff;background:var(--avenir);\n' +
 '  animation:sioEtPop .5s cubic-bezier(.22,1.4,.36,1) both}\n' +
 '.sio-et-e.fait i{background:var(--fait)}\n' +
-'.sio-et-e.active i{background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'.sio-et-e.active i{background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  animation:sioEtPop .5s cubic-bezier(.22,1.4,.36,1) both,\n' +
 '            sioEtPulse var(--pulse) ease-in-out .6s infinite}\n' +
 '.sio-et-e:nth-child(2) i{animation-delay:.12s}\n' +
@@ -4395,6 +4515,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fond:#F6F4FF;    /* ICI : le fond de l’encart */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur du titre */\n' +
 '  --gris:#5E666A;    /* ICI : la couleur du texte */\n' +
@@ -4436,6 +4557,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-gt{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-gt{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-gt, .sio-gt *{box-sizing:border-box}\n' +
 '.sio-gt{max-width:var(--large-max);margin:0 auto;padding:24px 22px;\n' +
@@ -4444,7 +4569,7 @@ code:
 '  border:1px solid var(--c2);font-family:var(--f)}\n' +
 '.sio-gt i{flex:none;display:flex;align-items:center;justify-content:center;\n' +
 '  width:52px;height:52px;border-radius:50%;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  animation:sioGtHalo 3.4s ease-in-out 1.6s infinite}\n' +
 '.sio-gt svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.9;\n' +
 '  stroke-linecap:round;stroke-linejoin:round}\n' +
@@ -4579,6 +4704,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fond:#ffffff;    /* ICI : le fond des lignes */\n' +
 '  --bord:#EDEAF4;    /* ICI : la couleur du contour */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur des titres */\n' +
@@ -4623,6 +4749,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-su{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-su{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-su, .sio-su *{box-sizing:border-box}\n' +
 '.sio-su{max-width:var(--large-max);margin:0 auto;padding:26px 16px;\n' +
@@ -4633,7 +4763,7 @@ code:
 '  position:relative}\n' +
 '.sio-su ol::before{content:"";position:absolute;left:calc(18px + var(--rond) / 2 - 1px);\n' +
 '  top:26px;bottom:26px;width:2px;transform-origin:top;\n' +
-'  background:linear-gradient(180deg,var(--c1),var(--c2))}\n' +
+'  background:linear-gradient(180deg,var(--c1),var(--g2))}\n' +
 '.sio-su.anim ol::before{transform:scaleY(0);\n' +
 '  transition:transform .9s cubic-bezier(.22,1,.36,1)}\n' +
 '.sio-su.anim.vu ol::before{transform:scaleY(1)}\n' +
@@ -4643,7 +4773,7 @@ code:
 '.sio-su i{flex:none;display:flex;align-items:center;justify-content:center;\n' +
 '  width:var(--rond);height:var(--rond);border-radius:50%;font-style:normal;\n' +
 '  color:#fff;font-weight:800;font-size:15px;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d))}\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d))}\n' +
 '.sio-su b{display:block;font-size:var(--taille);color:var(--encre);margin-bottom:3px}\n' +
 '.sio-su span{display:block;font-size:calc(var(--taille) - 1px);\n' +
 '  line-height:1.55;color:var(--gris)}\n' +
@@ -4888,6 +5018,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --txt:#ffffff;     /* ICI : la couleur du texte */\n' +
 '  --titre:24px;      /* ICI : la taille du titre */\n' +
 '  --taille:17px;     /* ICI : la taille du texte */\n' +
@@ -4931,12 +5062,16 @@ code:
 '  =================================================== */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-pu{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-pu{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-pu, .sio-pu *{box-sizing:border-box}\n' +
 '.sio-pu{max-width:var(--large-max);margin:0 auto;padding:30px 16px;\n' +
 '  font-family:var(--f)}\n' +
 '.sio-pu-carte{padding:34px 28px;border-radius:var(--arrondi);text-align:center;\n' +
-'  color:var(--txt);background:linear-gradient(135deg,var(--c1),var(--c2d));\n' +
+'  color:var(--txt);background:linear-gradient(135deg,var(--c1),var(--g2d));\n' +
 '  box-shadow:0 30px 60px -40px var(--c1);\n' +
 '  animation:sioPuMonte .6s cubic-bezier(.22,1,.36,1) both}\n' +
 '.sio-pu em{display:inline-block;margin-bottom:12px;padding:6px 14px;\n' +
@@ -4979,6 +5114,7 @@ code:
 '  --c1:#7D7EE1;      /* ICI : ta couleur principale */\n' +
 '  --c2:#C6BCFF;      /* ICI : ta couleur claire */\n' +
 '  --c2d:#9E9AEF;     /* ICI : le mélange des deux (garde le texte blanc lisible) */\n' +
+'  --uni:0;          /* ICI : 0 = dégradé, 1 = une seule couleur (la principale) */\n' +
 '  --fond:#ffffff;    /* ICI : le fond de la carte */\n' +
 '  --bord:#E6E3EE;    /* ICI : la couleur du contour */\n' +
 '  --encre:#1B1E24;   /* ICI : la couleur du titre */\n' +
@@ -5025,6 +5161,10 @@ code:
 '  ------------------------------------------------------------- */\n' +
 '}\n' +
 '/* ============ Fin des réglages : ne touche pas la suite ============ */\n' +
+'.sio-ag{--g2:var(--c2);--g2d:var(--c2d)}\n' +
+'@supports (color:color-mix(in srgb,red 50%,blue)){.sio-ag{\n' +
+'  --g2:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2));\n' +
+'  --g2d:color-mix(in srgb,var(--c1) calc(var(--uni) * 100%),var(--c2d))}}\n' +
 '\n' +
 '.sio-ag, .sio-ag *{box-sizing:border-box}\n' +
 '.sio-ag{max-width:var(--large-max);margin:0 auto;padding:24px 22px;\n' +
@@ -5037,7 +5177,7 @@ code:
 '  border:1px solid var(--bord)}\n' +
 '.sio-ag-jour b{display:block;padding:4px 0;font-size:12px;font-weight:800;\n' +
 '  letter-spacing:.1em;text-transform:uppercase;color:#fff;\n' +
-'  background:linear-gradient(135deg,var(--c1),var(--c2d))}\n' +
+'  background:linear-gradient(135deg,var(--c1),var(--g2d))}\n' +
 '.sio-ag-jour span{display:block;padding:6px 0 8px;font-size:26px;\n' +
 '  font-weight:800;color:var(--encre);line-height:1}\n' +
 '.sio-ag-txt{text-align:left}\n' +
@@ -5494,12 +5634,42 @@ function melange(a,b,t){
   }
   return o;
 }
+/* Bouton « Personnaliser » : ouvre une nouvelle conversation Claude,
+   avec le bloc (et les couleurs choisies) déjà prêt dans le message. */
+function messageClaude(item){
+  return "Bonjour Claude ! Je veux personnaliser le bloc « " + item.name + " » de la bibliothèque Koweb, pour ma page Système.io.\n\n" +
+    "Commence par me demander ce que je veux changer (textes, couleurs, prix, liens, dates…). " +
+    "Ensuite, rends-moi le code complet, prêt à coller dans un élément « Code personnalisé » de Système.io.\n\n" +
+    "Règles à respecter :\n" +
+    "- Ne modifie que ce que je demande : les valeurs de l’encadré RÉGLAGES, les textes visibles, les liens (href, data-url) et les attributs data- (dates, prix, mots, codes).\n" +
+    "- Garde tout le reste à l’identique : balises, classes, CSS, JavaScript et commentaires.\n" +
+    "- Couleurs en #RRGGBB. Si --c1 ou --c2 change, recalcule --c2d : un mélange des deux, un peu plus proche de --c1, assez foncé pour qu’un texte blanc reste lisible.\n" +
+    "- Pour un bloc d’une seule couleur sans dégradé, mets --uni:1;.\n" +
+    "- Dates au format AAAA-MM-JJTHH:MM:SS.\n" +
+    "- Si un texte apparaît en double (rubans qui défilent), modifie les deux copies.\n" +
+    "- Donne toujours le bloc entier, dans un seul bloc de code, puis explique en une phrase ce que tu as changé.\n\n" +
+    "Voici le code du bloc :\n\n```html\n" + currentCode(item) + "\n```";
+}
+function ouvrirClaude(item){
+  var msg=messageClaude(item);
+  /* copie de secours : si le message n’apparaît pas, il suffit de coller (Ctrl+V) */
+  try{
+    var ta=document.createElement("textarea");
+    ta.value=msg; ta.style.position="fixed"; ta.style.opacity="0"; ta.style.left="-9999px";
+    document.body.appendChild(ta); ta.select(); document.execCommand("copy"); document.body.removeChild(ta);
+  }catch(e){}
+  try{ if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(msg).catch(function(){}); } }catch(e){}
+  var q = msg.length<13500 ? msg : "J’ai copié un bloc de la bibliothèque Koweb : je le colle juste en dessous.";
+  window.open("https://claude.ai/new?q="+encodeURIComponent(q),"_blank","noopener");
+}
 function currentCode(item){
   var c1=document.getElementById("kwb-c1").value;
   var c2=document.getElementById("kwb-c2").value;
   return item.code.split(D1).join(c1).split(D2).join(c2)
-                  .split(D3).join(melange(c1,c2,0.45));
+                  .split(D3).join(melange(c1,c2,0.45))
+                  .split("--uni:0;").join(UNI?"--uni:1;":"--uni:0;");
 }
+var UNI=false;
 
 function buildCard(item){
   var card=document.createElement("article");
@@ -5526,8 +5696,9 @@ function buildCard(item){
   foot.appendChild(copy); foot.appendChild(see);
   var ai=document.createElement("button");
   ai.type="button"; ai.className="btn btn-ai"; ai.textContent="Personnaliser";
-  ai.hidden=!LIEN_ASSISTANT;
-  ai.addEventListener("click",function(){ window.open(LIEN_ASSISTANT,"_blank","noopener"); });
+  ai.hidden=false;
+  ai.title="Ouvre une conversation avec Claude pour personnaliser ce bloc";
+  ai.addEventListener("click",function(){ ouvrirClaude(item); });
   foot.appendChild(ai);
 
   var pre=document.createElement("pre");
@@ -5659,8 +5830,16 @@ document.getElementById("kwb-c2").addEventListener("input",refreshColors);
 document.getElementById("kwb-reset").addEventListener("click",function(){
   document.getElementById("kwb-c1").value=D1;
   document.getElementById("kwb-c2").value=D2;
-  refreshColors();
+  setUni(false);
 });
+function setUni(v){
+  UNI=v;
+  document.getElementById("kwb-uni-on").setAttribute("aria-pressed",v?"true":"false");
+  document.getElementById("kwb-uni-off").setAttribute("aria-pressed",v?"false":"true");
+  refreshColors();
+}
+document.getElementById("kwb-uni-on").addEventListener("click",function(){ setUni(true); });
+document.getElementById("kwb-uni-off").addEventListener("click",function(){ setUni(false); });
 
 /* =========================================================
    Sélection affichée : uniquement les blocs présents sur la page
