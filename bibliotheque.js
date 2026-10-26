@@ -11415,10 +11415,12 @@ function filtre(){
 
 /* ============ Dernière mise à jour ============ */
 var ID_MAJ="kwb-maj";
-var MAJ="8 octobre 2026", VERSION="35";
+var MAJ="26 octobre 2026", VERSION="36";
 (function(){
   var p=document.getElementById(ID_MAJ);
-  if(p) p.textContent="Dernière mise à jour : "+MAJ+" · version "+VERSION;
+  /* La cliente voit la date. Le numéro de version reste lisible au survol,
+     et dans le fichier, pour vérifier ce qui est en ligne. */
+  if(p){ p.textContent="Dernière mise à jour : "+MAJ; p.title="version "+VERSION; }
 })();
 
 /* ============ Voir l’effet à la demande ============
